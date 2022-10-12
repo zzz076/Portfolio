@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Switch</title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+
+    <style type="text/css">
+        .switch{
+            height: 30px;
+            width: 60px;
+            border-radius: 15px;
+            background-color: #a3a3a3;
+        }
+        .switch>.btn{
+            height: 30px;
+            width: 30px;
+            border-radius: 15px;
+            background-color: #2f2f2f;
+        }
+    
+        .switch-on{
+            background-color: #ddffdd;
+        }
+    
+        .switch-on>.btn{
+            background-color: #448844;
+            margin-left: 30px;
+        }
+    </style>
+    <script type="text/babel">
+        // class Switch extends React.Component{   
+        //     constructor(props){
+        //         super(props);
+        //         this.state={on:false};
+        //     }
+
+        //     render(){
+        //         let className1="switch"
+        //         if(this.state.on){
+        //             className1+=" switch-on"
+        //         }
+        //         return<div onClick={this.update.bind(this)} className={className1}>
+        //             <div className="btn"></div>  
+        //         </div>;
+        //     }
+        //     update(){
+        //         this.setState((currentState)=> ({on:!currentState.on}));
+        //     }
+
+        // } 
+        class Switch extends React.Component{  
+        constructor(props){
+                super(props);
+                this.state={on:false};
+            }
+            render(){
+                let className = "switch"
+                if(this.state.on){
+                className+=" switch-on"
+                }
+                return(
+                    <div className={className} onClick={this.update.bind(this)} >
+                    <div className="btn"></div>
+                </div>);
+            
+            }
+            update(){
+                this.setState((currentState)=>({on:!currentState.on}));
+            }
+        }
+        
+
+        window.addEventListener("load",()=>{
+            ReactDOM.render(<Switch />,document.body);
+        });
+
+    </script>
+</head>
+
+
+<body>
+
+</body>
+</html>

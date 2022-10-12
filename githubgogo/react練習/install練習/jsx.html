@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+  
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="./style.css"> -->
+    <style type="text/css">
+        .head-3{
+            font-size: 50px;
+            font-weight: bold;
+        }
+    </style>
+
+    <script type="text/babel">
+        class MyHead extends React.Component{
+            constructor(props){
+                super(props);
+                this.state={color:"red"};
+            }
+            
+            render(){
+                return <div className={"head-"+this.props.level}
+                        style={{color:this.state.color}}
+                        onClick={this.clickHandler.bind(this)}
+                        onMouseOver={this.mouseOverHandler.bind(this)}
+                        onMouseOut={this.mouseOutHandler.bind(this)}
+                        >Hello World</div>;
+                    }
+
+            
+            mouseOutHandler(e){
+                this.setState({color:"red"});
+            }
+            
+            mouseOverHandler(e){
+                this.setState({color:"blue"});
+            }
+
+            clickHandler(e){
+                this.setState({color:"green"});
+            }
+        }
+
+
+        // class MyHeadList extends React.Component{
+        //     render(){
+        //         return<div>
+        //             <MyHead level="1" color="red" />
+        //             <MyHead level="2" color="green" />    
+        //             <MyHead level="3" color="blue" />
+        //         </div>
+        //     }
+        // }
+
+        window.addEventListener("load", ()=>{
+            ReactDOM.render(<MyHead level="3" />,document.body);
+           });
+       
+ 
+    </script>
+
+</head>
+<body>
+</body>
+</html>

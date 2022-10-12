@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+}
+
+.wrap{
+    padding: 10px 0;
+    background: #005724;
+    box-shadow: 0px 5px 5px rgba(120, 250, 33, .6);
+}
+body{
+    background-color: #04a37c;
+}
+
+.breadcrumb{
+    width:90%;
+    margin:auto;
+    display: flex;
+
+} 
+
+.breadcrumb li:last-child a{
+    color: #ff0;
+}
+
+.breadcrumb a:hover{
+    color: rgb(240, 164, 0);
+}
+
+.breadcrumb li{
+    padding: 0 20px;
+}
+
+
+.breadcrumb a{
+    text-decoration:none;
+    color: #fff;
+
+}
+
+.breadcrumb li + li{
+    padding-left: 0;
+
+}
+.breadcrumb li + li::before{
+    content: '>';
+    color: #fff;
+    margin-right: 20px;
+}

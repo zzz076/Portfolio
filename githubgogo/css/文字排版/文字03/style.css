@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Space+Mono&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.container{
+    width: 1200px;
+    margin: auto;
+    /* display: flex; */
+    padding: 100px 0;
+}
+
+.container h1{
+    /* width: 400px; */
+    /* text-align: right; */
+    box-sizing: border-box;
+    padding:0 15px;
+    /* background-color: #d5c7b9; */
+    margin-bottom: 30px;
+    color: #aaa;
+    font-size: 100px;
+    font-family: 'Space Mono', monospace;
+    position: relative;
+}
+.container h1:after{
+    content: '';
+    display: block;
+    width: 100%;
+    bottom: 0%;
+    height: 70px;
+    background-color: #eee;
+    position: absolute;
+    z-index: -1;
+}
+
+.container h1::after{
+    content: '';
+    display: block;
+    height: 70px;
+    width: 100%;
+    bottom: 0;
+    background-color: #EEE;
+    z-index: -1;
+}
+
+.container .txt{
+    /* width: 800px; */
+    box-sizing: border-box;
+    padding:0 15px;
+    column-count: 2;
+    column-gap: 30px;
+    font-family: 'Space Mono', monospace;
+}
+
+.container .txt p::first-letter{
+    font-size: 40px;
+    float: left;
+    padding-right: 10px;
+}

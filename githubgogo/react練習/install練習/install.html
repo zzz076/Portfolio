@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script>
+       class MyHead extends React.Component{
+        render(){
+            // console.log(this.props.level)
+            return React.createElement("H"+this.props.level,null,"Hello Component");
+        }
+       }
+
+       class MyHeadList extends React.Component{
+        constructor(props){
+            super(props);
+            this.state={maxLevel:props.start};
+        }
+
+        componentWillMount(){//組件將要繪製前的時刻
+            this.intervalid = window.setInterval(()=>{
+                this.setState((currentState,currentProps)=>{
+                    if(currentState.maxLevel>currentProps.end){
+                        return currentState;
+                    }else{
+                    return {maxLevel:currentState.maxLevel+1};
+                    }
+                })
+            },1000);            
+        }
+
+        componentWillUnmount(){
+            window.clearInterval(this.intervalid); 
+        }
+
+        render(){
+            let heads=[];
+            let head;
+            for(let i=1; i<this.state.maxLevel;i++){
+                head = React.createElement(MyHead,{level:i});
+                heads.push(head);
+            }
+            return React.createElement("DIV",null,heads)
+        }
+       }
+
+       window.addEventListener("load",()=>{
+            let myComponent=React.createElement(MyHeadList,{start:2, end:3})
+            ReactDOM.render(myComponent, document.body);
+       });
+    </script>
+</body>
+</html>

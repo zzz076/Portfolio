@@ -1,0 +1,71 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.banner{
+    height: 700px;
+    background: url('./貓貓背景.jpg') center top / cover;
+}
+
+.sec .container{
+    width: 1200px;
+    margin: auto;
+    display: flex;
+    padding: 100px 0 ;
+    position: relative;
+    z-index: 2;
+
+}
+
+.sec{
+    position: relative;
+}
+
+.sec .item{
+    width: 570px;
+    margin: 0 15px;
+}
+
+.sec .item h2{
+    margin-bottom: 1.3em;
+}
+
+.sec .item p{
+    line-height: 1.7;
+    margin-bottom: 1.6em;
+}
+
+.sec::after{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-color: #fff;
+    top:0;
+    left:50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    box-shadow: 160px 0px 0px -30px #fff,
+    400px 0px 0px 0px #fff,
+    600px 0px 0px -36px #fff,
+    880px 9px 0px 20px #fff,
+    480px 22px 0px 14px #fff,
+    350px -30px 0px 0px rgba(0,0,0,.5),
+    550px -40px 0px -36px rgba(0,0,0,.5),
+    830px -44px 0px 52px rgba(0,0,0,.5),
+    430px -20px 0px 40px rgba(0,0,0,.5);
+}
+
+.sec::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 200px;
+    background-color: #fff;
+    z-index: 1;
+    top: 0;
+    left: 0;
+}
