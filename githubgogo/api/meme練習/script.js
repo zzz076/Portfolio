@@ -1,6 +1,6 @@
 let weatherTool = {
 
-    apiKey:'CWB-AF5A2CB6-1F46-44EC-B612-E2E27DC2AD85',
+    apiKey:'z',
     locationName:'',
     fetchWeather: function(contest){
         switch(contest){
