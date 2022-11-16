@@ -1,0 +1,254 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap");
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: rgba(87, 87, 87, 0.6);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background: rgb(219, 219, 219);
+}
+
+html {
+  height: 100%;
+}
+
+:root {
+  --main-grey:#878787 ;
+}
+
+* {
+  outline: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Inter", sans-serif;
+  font-family: "Noto Sans TC", sans-serif;
+}
+
+.app {
+  height: 100%;
+  position: relative;
+  min-height: 100vh;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+.logo img {
+  max-height: 3.5rem;
+  margin-right: 2rem;
+}
+
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+  color: #fff;
+  padding: 0 3rem;
+  background-color: rgba(4, 4, 4, 0.7);
+}
+.nav-bar .left {
+  display: flex;
+  align-items: center;
+}
+.nav-bar .left .selection a {
+  color: #fff;
+  margin: 0.5rem;
+}
+.nav-bar .right {
+  display: flex;
+  font-size: 1.5rem;
+  align-items: center;
+  position: relative;
+}
+.nav-bar .right .search .search-bar {
+  padding: 0.3rem;
+}
+.nav-bar .right .search .trigger-input {
+  display: none;
+  font-size: 1rem;
+  color: #fff;
+  margin-left: 1rem;
+  border: none;
+  background: none;
+  max-width: 20rem;
+}
+.nav-bar .right .bell:hover .callout-arrow, .nav-bar .right .bell:hover .sub-menu {
+  transition: 200ms;
+  display: block !important;
+}
+.nav-bar .right .nav-btn {
+  margin: 0.8rem;
+  color: #fff;
+  display: flex;
+  position: relative;
+  justify-content: center;
+}
+.nav-bar .right .nav-btn img {
+  max-height: 2rem;
+  border-radius: 0.5rem;
+}
+.nav-bar .right .nav-btn .callout-arrow {
+  display: none;
+  position: absolute;
+  font-size: 0.5rem;
+  bottom: -1.5rem;
+  color: rgba(255, 255, 255, 0.4);
+}
+.nav-bar .right .sub-menu {
+  position: relative;
+  display: none;
+}
+.nav-bar .right .sub-menu .sub-menu-list {
+  position: absolute;
+  list-style: none;
+  right: 25%;
+  top: 5px;
+}
+.nav-bar .right .sub-menu .sub-menu-list .topbar {
+  position: absolute;
+  height: 2px;
+  background-color: #FFF;
+  width: 100%;
+}
+.nav-bar .right .sub-menu .sub-menu-list .sub-menu-item .ptrack-container .ptrack-content .notifications-container {
+  max-height: 560px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.nav-bar .right .sub-menu .sub-menu-list .sub-menu-item .ptrack-container .ptrack-content .notifications-container .notification {
+  list-style: none;
+}
+.nav-bar .right .sub-menu .sub-menu-list .sub-menu-item .ptrack-container .ptrack-content .notifications-container .notification .notification-content {
+  border: 1px solid #878787;
+}
+.nav-bar .right .sub-menu .sub-menu-list .sub-menu-item .ptrack-container .ptrack-content .notifications-container .notification .notification-content .image-text-notification {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background-color: rgba(41, 40, 40, 0.6);
+}
+.nav-bar .right .sub-menu .sub-menu-list .sub-menu-item .ptrack-container .ptrack-content .notifications-container .notification .notification-content .image-text-notification .image {
+  padding: 16px;
+}
+.nav-bar .right .sub-menu .sub-menu-list .sub-menu-item .ptrack-container .ptrack-content .notifications-container .notification .notification-content .image-text-notification .image .title-card {
+  width: 112px;
+  border-radius: 4px;
+  max-height: 63px;
+}
+.nav-bar .right .sub-menu .sub-menu-list .sub-menu-item .ptrack-container .ptrack-content .notifications-container .notification .notification-content .image-text-notification .text {
+  width: 264px;
+  padding: 16px;
+  color: #fff;
+  font-size: 16px;
+}
+.nav-bar .right .sub-menu .sub-menu-list .sub-menu-item .ptrack-container .ptrack-content .notifications-container .notification .notification-content .image-text-notification .text .age {
+  font-size: 12px;
+  color: #dcdcdc;
+}
+
+.hero {
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  background: url(./assets/hero-background.jpg) no-repeat center;
+  background-size: cover;
+  top: 0;
+  display: flex;
+  z-index: -1;
+}
+.hero .hero-btn {
+  bottom: 30%;
+  position: absolute;
+  right: 0;
+  display: flex;
+}
+.hero .hero-btn .replay {
+  border-radius: 50%;
+  background-color: rgba(87, 87, 87, 0.1);
+  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+  margin-right: 1.5rem;
+  font-size: 1.35rem;
+  color: #fff;
+  border: 1px solid #FFF;
+}
+.hero .hero-btn .level {
+  background-color: rgba(87, 87, 87, 0.6);
+  padding: 0.5vw 3.5vw 0.5vw 0.8vw;
+  color: #fff;
+}
+
+.hero-describe {
+  display: flex;
+  flex-direction: column;
+  font-size: 5rem;
+  z-index: 100;
+  padding: 2rem;
+  top: 20%;
+  left: 2%;
+  position: absolute;
+}
+.hero-describe .hero-img {
+  display: flex;
+  justify-self: start;
+}
+.hero-describe .hero-tag {
+  display: flex;
+  align-items: center;
+  font-size: 1.3rem;
+}
+.hero-describe .hero-tag img {
+  max-width: 1.3rem;
+  max-height: 1.3rem;
+}
+.hero-describe .hero-content {
+  margin: 0.5rem 0;
+  max-width: 100%;
+  max-width: 20rem;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #fff;
+}
+.hero-describe .hero-btns {
+  display: flex;
+  cursor: pointer;
+}
+.hero-describe .hero-btns .hero-play, .hero-describe .hero-btns .hero-infor {
+  display: flex;
+  font-size: 1.1rem;
+  padding: 0.2rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: bold;
+}
+.hero-describe .hero-btns .hero-play {
+  background-color: #FFF;
+  margin-right: 0.5rem;
+}
+.hero-describe .hero-btns .hero-play .hero-play-icon, .hero-describe .hero-btns .hero-play .hero-play-text {
+  margin: 0.3rem;
+}
+.hero-describe .hero-btns .hero-infor {
+  background-color: rgba(87, 87, 87, 0.6);
+  margin-left: 0.5rem;
+}
+.hero-describe .hero-btns .hero-infor .hero-infor-icon, .hero-describe .hero-btns .hero-infor .hero-infor-text {
+  margin: 0.3rem;
+  color: #fff;
+}
+
+.active {
+  display: block !important;
+}
+
+.border {
+  border: 1px solid #fff;
+  border-radius: 3px;
+}/*# sourceMappingURL=style.css.map */
